@@ -20,6 +20,8 @@ Version >= 0.2.0 requires AWS CDK v2.
 * [`SlackTextract`](src/slack-textract) Extract text from images posted to Slack
   using Amazon Textract. The extracted text is posted in a thread under the image
   and gets indexed!
+* [`SslServerTest`](src/ssl-server-test) Test a server/host for SSL/TLS on schedule and
+  get notified when the overall rating is not satisfactory. [Powered by Qualys SSL Labs](https://www.ssllabs.com/).
 * [`StateMachineCustomResourceProvider`](src/state-machine-cr-provider) Implement custom
   resources with AWS Step Functions state machines
 * [`StaticWebsite`](src/static-website) A CloudFront static website hosted on S3 with

@@ -258,6 +258,38 @@ func init() {
 		reflect.TypeOf((*SlackkAppManifestBotUser)(nil)).Elem(),
 	)
 	_jsii_.RegisterClass(
+		"cloudstructs.SslServerTest",
+		reflect.TypeOf((*SslServerTest)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberProperty{JsiiProperty: "alarmTopic", GoGetter: "AlarmTopic"},
+			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+		},
+		func() interface{} {
+			j := jsiiProxy_SslServerTest{}
+			_jsii_.InitJsiiProxy(&j.Type__constructsConstruct)
+			return &j
+		},
+	)
+	_jsii_.RegisterEnum(
+		"cloudstructs.SslServerTestGrade",
+		reflect.TypeOf((*SslServerTestGrade)(nil)).Elem(),
+		map[string]interface{}{
+			"A_PLUS": SslServerTestGrade_A_PLUS,
+			"A": SslServerTestGrade_A,
+			"A_MINUS": SslServerTestGrade_A_MINUS,
+			"B": SslServerTestGrade_B,
+			"C": SslServerTestGrade_C,
+			"D": SslServerTestGrade_D,
+			"E": SslServerTestGrade_E,
+			"F": SslServerTestGrade_F,
+		},
+	)
+	_jsii_.RegisterStruct(
+		"cloudstructs.SslServerTestProps",
+		reflect.TypeOf((*SslServerTestProps)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
 		"cloudstructs.StateMachineCustomResourceProvider",
 		reflect.TypeOf((*StateMachineCustomResourceProvider)(nil)).Elem(),
 		[]_jsii_.Member{
