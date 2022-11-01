@@ -37,6 +37,9 @@ func (j *jsiiProxy_ToolkitCleaner) Node() constructs.Node {
 func NewToolkitCleaner(scope constructs.Construct, id *string, props *ToolkitCleanerProps) ToolkitCleaner {
 	_init_.Initialize()
 
+	if err := validateNewToolkitCleanerParameters(scope, id, props); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_ToolkitCleaner{}
 
 	_jsii_.Create(
@@ -65,6 +68,9 @@ func NewToolkitCleaner_Override(t ToolkitCleaner, scope constructs.Construct, id
 func ToolkitCleaner_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
+	if err := validateToolkitCleaner_IsConstructParameters(x); err != nil {
+		panic(err)
+	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(

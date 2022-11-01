@@ -122,6 +122,9 @@ func (j *jsiiProxy_SlackApp) VerificationToken() *string {
 func NewSlackApp(scope constructs.Construct, id *string, props *SlackAppProps) SlackApp {
 	_init_.Initialize()
 
+	if err := validateNewSlackAppParameters(scope, id, props); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_SlackApp{}
 
 	_jsii_.Create(
@@ -150,6 +153,9 @@ func NewSlackApp_Override(s SlackApp, scope constructs.Construct, id *string, pr
 func SlackApp_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
+	if err := validateSlackApp_IsConstructParameters(x); err != nil {
+		panic(err)
+	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(

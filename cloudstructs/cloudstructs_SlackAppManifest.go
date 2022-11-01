@@ -23,6 +23,9 @@ type jsiiProxy_SlackAppManifest struct {
 func NewSlackAppManifest(props *SlackAppManifestProps) SlackAppManifest {
 	_init_.Initialize()
 
+	if err := validateNewSlackAppManifestParameters(props); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_SlackAppManifest{}
 
 	_jsii_.Create(
@@ -45,6 +48,9 @@ func NewSlackAppManifest_Override(s SlackAppManifest, props *SlackAppManifestPro
 }
 
 func (s *jsiiProxy_SlackAppManifest) Render(construct constructs.IConstruct) *string {
+	if err := s.validateRenderParameters(construct); err != nil {
+		panic(err)
+	}
 	var returns *string
 
 	_jsii_.Invoke(

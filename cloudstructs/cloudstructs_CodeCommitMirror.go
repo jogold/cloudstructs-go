@@ -37,6 +37,9 @@ func (j *jsiiProxy_CodeCommitMirror) Node() constructs.Node {
 func NewCodeCommitMirror(scope constructs.Construct, id *string, props *CodeCommitMirrorProps) CodeCommitMirror {
 	_init_.Initialize()
 
+	if err := validateNewCodeCommitMirrorParameters(scope, id, props); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_CodeCommitMirror{}
 
 	_jsii_.Create(
@@ -65,6 +68,9 @@ func NewCodeCommitMirror_Override(c CodeCommitMirror, scope constructs.Construct
 func CodeCommitMirror_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
+	if err := validateCodeCommitMirror_IsConstructParameters(x); err != nil {
+		panic(err)
+	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(

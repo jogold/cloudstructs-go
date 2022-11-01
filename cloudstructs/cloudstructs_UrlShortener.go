@@ -62,6 +62,9 @@ func (j *jsiiProxy_UrlShortener) Node() constructs.Node {
 func NewUrlShortener(scope constructs.Construct, id *string, props *UrlShortenerProps) UrlShortener {
 	_init_.Initialize()
 
+	if err := validateNewUrlShortenerParameters(scope, id, props); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_UrlShortener{}
 
 	_jsii_.Create(
@@ -90,6 +93,9 @@ func NewUrlShortener_Override(u UrlShortener, scope constructs.Construct, id *st
 func UrlShortener_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
+	if err := validateUrlShortener_IsConstructParameters(x); err != nil {
+		panic(err)
+	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(

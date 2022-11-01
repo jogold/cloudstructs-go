@@ -50,6 +50,9 @@ func (j *jsiiProxy_SslServerTest) Node() constructs.Node {
 func NewSslServerTest(scope constructs.Construct, id *string, props *SslServerTestProps) SslServerTest {
 	_init_.Initialize()
 
+	if err := validateNewSslServerTestParameters(scope, id, props); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_SslServerTest{}
 
 	_jsii_.Create(
@@ -78,6 +81,9 @@ func NewSslServerTest_Override(s SslServerTest, scope constructs.Construct, id *
 func SslServerTest_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
+	if err := validateSslServerTest_IsConstructParameters(x); err != nil {
+		panic(err)
+	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(

@@ -63,6 +63,9 @@ func (j *jsiiProxy_StaticWebsite) Node() constructs.Node {
 func NewStaticWebsite(scope constructs.Construct, id *string, props *StaticWebsiteProps) StaticWebsite {
 	_init_.Initialize()
 
+	if err := validateNewStaticWebsiteParameters(scope, id, props); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_StaticWebsite{}
 
 	_jsii_.Create(
@@ -91,6 +94,9 @@ func NewStaticWebsite_Override(s StaticWebsite, scope constructs.Construct, id *
 func StaticWebsite_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
+	if err := validateStaticWebsite_IsConstructParameters(x); err != nil {
+		panic(err)
+	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
@@ -116,6 +122,9 @@ func StaticWebsite_DefaultSecurityHeadersBehavior() *awscloudfront.ResponseSecur
 
 func StaticWebsite_SetDefaultSecurityHeadersBehavior(val *awscloudfront.ResponseSecurityHeadersBehavior) {
 	_init_.Initialize()
+	if err := validateStaticWebsite_SetDefaultSecurityHeadersBehaviorParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.StaticSet(
 		"cloudstructs.StaticWebsite",
 		"defaultSecurityHeadersBehavior",

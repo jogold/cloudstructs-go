@@ -54,6 +54,9 @@ func (j *jsiiProxy_SamlIdentityProvider) SamlIdentityProviderArn() *string {
 func NewSamlIdentityProvider(scope constructs.Construct, id *string, props *SamlIdentityProviderProps) SamlIdentityProvider {
 	_init_.Initialize()
 
+	if err := validateNewSamlIdentityProviderParameters(scope, id, props); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_SamlIdentityProvider{}
 
 	_jsii_.Create(
@@ -83,6 +86,9 @@ func NewSamlIdentityProvider_Override(s SamlIdentityProvider, scope constructs.C
 func SamlIdentityProvider_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
+	if err := validateSamlIdentityProvider_IsConstructParameters(x); err != nil {
+		panic(err)
+	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(

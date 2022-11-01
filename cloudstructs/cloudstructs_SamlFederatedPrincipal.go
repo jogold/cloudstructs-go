@@ -132,6 +132,9 @@ func (j *jsiiProxy_SamlFederatedPrincipal) PrincipalAccount() *string {
 func NewSamlFederatedPrincipal(identityProvider SamlIdentityProvider) SamlFederatedPrincipal {
 	_init_.Initialize()
 
+	if err := validateNewSamlFederatedPrincipalParameters(identityProvider); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_SamlFederatedPrincipal{}
 
 	_jsii_.Create(
@@ -155,6 +158,9 @@ func NewSamlFederatedPrincipal_Override(s SamlFederatedPrincipal, identityProvid
 }
 
 func (s *jsiiProxy_SamlFederatedPrincipal) AddToPolicy(statement awsiam.PolicyStatement) *bool {
+	if err := s.validateAddToPolicyParameters(statement); err != nil {
+		panic(err)
+	}
 	var returns *bool
 
 	_jsii_.Invoke(
@@ -168,6 +174,9 @@ func (s *jsiiProxy_SamlFederatedPrincipal) AddToPolicy(statement awsiam.PolicySt
 }
 
 func (s *jsiiProxy_SamlFederatedPrincipal) AddToPrincipalPolicy(_statement awsiam.PolicyStatement) *awsiam.AddToPrincipalPolicyResult {
+	if err := s.validateAddToPrincipalPolicyParameters(_statement); err != nil {
+		panic(err)
+	}
 	var returns *awsiam.AddToPrincipalPolicyResult
 
 	_jsii_.Invoke(
@@ -207,6 +216,9 @@ func (s *jsiiProxy_SamlFederatedPrincipal) ToString() *string {
 }
 
 func (s *jsiiProxy_SamlFederatedPrincipal) WithConditions(conditions *map[string]interface{}) awsiam.IPrincipal {
+	if err := s.validateWithConditionsParameters(conditions); err != nil {
+		panic(err)
+	}
 	var returns awsiam.IPrincipal
 
 	_jsii_.Invoke(

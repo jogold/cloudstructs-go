@@ -50,6 +50,9 @@ func (j *jsiiProxy_SlackEvents) Node() constructs.Node {
 func NewSlackEvents(scope constructs.Construct, id *string, props *SlackEventsProps) SlackEvents {
 	_init_.Initialize()
 
+	if err := validateNewSlackEventsParameters(scope, id, props); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_SlackEvents{}
 
 	_jsii_.Create(
@@ -78,6 +81,9 @@ func NewSlackEvents_Override(s SlackEvents, scope constructs.Construct, id *stri
 func SlackEvents_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
+	if err := validateSlackEvents_IsConstructParameters(x); err != nil {
+		panic(err)
+	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(

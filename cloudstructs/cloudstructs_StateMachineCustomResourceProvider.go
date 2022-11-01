@@ -49,6 +49,9 @@ func (j *jsiiProxy_StateMachineCustomResourceProvider) ServiceToken() *string {
 func NewStateMachineCustomResourceProvider(scope constructs.Construct, id *string, props *StateMachineCustomResourceProviderProps) StateMachineCustomResourceProvider {
 	_init_.Initialize()
 
+	if err := validateNewStateMachineCustomResourceProviderParameters(scope, id, props); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_StateMachineCustomResourceProvider{}
 
 	_jsii_.Create(
@@ -77,6 +80,9 @@ func NewStateMachineCustomResourceProvider_Override(s StateMachineCustomResource
 func StateMachineCustomResourceProvider_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
+	if err := validateStateMachineCustomResourceProvider_IsConstructParameters(x); err != nil {
+		panic(err)
+	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(

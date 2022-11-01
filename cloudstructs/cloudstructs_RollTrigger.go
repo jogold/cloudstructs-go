@@ -56,6 +56,9 @@ func NewRollTrigger_Override(r RollTrigger) {
 func RollTrigger_FromRule(rule awsevents.Rule) RollTrigger {
 	_init_.Initialize()
 
+	if err := validateRollTrigger_FromRuleParameters(rule); err != nil {
+		panic(err)
+	}
 	var returns RollTrigger
 
 	_jsii_.StaticInvoke(
@@ -72,6 +75,9 @@ func RollTrigger_FromRule(rule awsevents.Rule) RollTrigger {
 func RollTrigger_FromSchedule(schedule awsevents.Schedule) RollTrigger {
 	_init_.Initialize()
 
+	if err := validateRollTrigger_FromScheduleParameters(schedule); err != nil {
+		panic(err)
+	}
 	var returns RollTrigger
 
 	_jsii_.StaticInvoke(

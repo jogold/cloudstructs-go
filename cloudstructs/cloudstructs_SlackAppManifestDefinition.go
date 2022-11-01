@@ -33,6 +33,9 @@ func NewSlackAppManifestDefinition_Override(s SlackAppManifestDefinition) {
 func SlackAppManifestDefinition_FromFile(file *string) SlackAppManifestDefinition {
 	_init_.Initialize()
 
+	if err := validateSlackAppManifestDefinition_FromFileParameters(file); err != nil {
+		panic(err)
+	}
 	var returns SlackAppManifestDefinition
 
 	_jsii_.StaticInvoke(
@@ -49,6 +52,9 @@ func SlackAppManifestDefinition_FromFile(file *string) SlackAppManifestDefinitio
 func SlackAppManifestDefinition_FromManifest(props *SlackAppManifestProps) SlackAppManifestDefinition {
 	_init_.Initialize()
 
+	if err := validateSlackAppManifestDefinition_FromManifestParameters(props); err != nil {
+		panic(err)
+	}
 	var returns SlackAppManifestDefinition
 
 	_jsii_.StaticInvoke(
@@ -65,6 +71,9 @@ func SlackAppManifestDefinition_FromManifest(props *SlackAppManifestProps) Slack
 func SlackAppManifestDefinition_FromString(manifest *string) SlackAppManifestDefinition {
 	_init_.Initialize()
 
+	if err := validateSlackAppManifestDefinition_FromStringParameters(manifest); err != nil {
+		panic(err)
+	}
 	var returns SlackAppManifestDefinition
 
 	_jsii_.StaticInvoke(
@@ -78,6 +87,9 @@ func SlackAppManifestDefinition_FromString(manifest *string) SlackAppManifestDef
 }
 
 func (s *jsiiProxy_SlackAppManifestDefinition) Render(construct constructs.IConstruct) *string {
+	if err := s.validateRenderParameters(construct); err != nil {
+		panic(err)
+	}
 	var returns *string
 
 	_jsii_.Invoke(

@@ -37,6 +37,9 @@ func (j *jsiiProxy_EcsServiceRoller) Node() constructs.Node {
 func NewEcsServiceRoller(scope constructs.Construct, id *string, props *EcsServiceRollerProps) EcsServiceRoller {
 	_init_.Initialize()
 
+	if err := validateNewEcsServiceRollerParameters(scope, id, props); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_EcsServiceRoller{}
 
 	_jsii_.Create(
@@ -65,6 +68,9 @@ func NewEcsServiceRoller_Override(e EcsServiceRoller, scope constructs.Construct
 func EcsServiceRoller_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
+	if err := validateEcsServiceRoller_IsConstructParameters(x); err != nil {
+		panic(err)
+	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(

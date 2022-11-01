@@ -75,6 +75,9 @@ func NewCodeCommitMirrorSourceRepository_Override(c CodeCommitMirrorSourceReposi
 func CodeCommitMirrorSourceRepository_GitHub(owner *string, name *string) CodeCommitMirrorSourceRepository {
 	_init_.Initialize()
 
+	if err := validateCodeCommitMirrorSourceRepository_GitHubParameters(owner, name); err != nil {
+		panic(err)
+	}
 	var returns CodeCommitMirrorSourceRepository
 
 	_jsii_.StaticInvoke(
@@ -91,6 +94,9 @@ func CodeCommitMirrorSourceRepository_GitHub(owner *string, name *string) CodeCo
 func CodeCommitMirrorSourceRepository_Private(name *string, url awsecs.Secret) CodeCommitMirrorSourceRepository {
 	_init_.Initialize()
 
+	if err := validateCodeCommitMirrorSourceRepository_PrivateParameters(name, url); err != nil {
+		panic(err)
+	}
 	var returns CodeCommitMirrorSourceRepository
 
 	_jsii_.StaticInvoke(

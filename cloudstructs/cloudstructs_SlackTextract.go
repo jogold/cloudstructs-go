@@ -37,6 +37,9 @@ func (j *jsiiProxy_SlackTextract) Node() constructs.Node {
 func NewSlackTextract(scope constructs.Construct, id *string, props *SlackTextractProps) SlackTextract {
 	_init_.Initialize()
 
+	if err := validateNewSlackTextractParameters(scope, id, props); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_SlackTextract{}
 
 	_jsii_.Create(
@@ -65,6 +68,9 @@ func NewSlackTextract_Override(s SlackTextract, scope constructs.Construct, id *
 func SlackTextract_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
+	if err := validateSlackTextract_IsConstructParameters(x); err != nil {
+		panic(err)
+	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(

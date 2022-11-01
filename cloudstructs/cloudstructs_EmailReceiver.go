@@ -37,6 +37,9 @@ func (j *jsiiProxy_EmailReceiver) Node() constructs.Node {
 func NewEmailReceiver(scope constructs.Construct, id *string, props *EmailReceiverProps) EmailReceiver {
 	_init_.Initialize()
 
+	if err := validateNewEmailReceiverParameters(scope, id, props); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_EmailReceiver{}
 
 	_jsii_.Create(
@@ -65,6 +68,9 @@ func NewEmailReceiver_Override(e EmailReceiver, scope constructs.Construct, id *
 func EmailReceiver_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
+	if err := validateEmailReceiver_IsConstructParameters(x); err != nil {
+		panic(err)
+	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
