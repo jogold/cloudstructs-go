@@ -27,6 +27,8 @@ type UrlShortenerProps struct {
 	CorsAllowOrigins *[]*string `field:"optional" json:"corsAllowOrigins" yaml:"corsAllowOrigins"`
 	// Expiration for short urls.
 	Expiration awscdk.Duration `field:"optional" json:"expiration" yaml:"expiration"`
+	// Whether to use IAM authorization.
+	IamAuthorization *bool `field:"optional" json:"iamAuthorization" yaml:"iamAuthorization"`
 	// The record name to use in the hosted zone.
 	RecordName *string `field:"optional" json:"recordName" yaml:"recordName"`
 }

@@ -8,8 +8,17 @@ import (
 
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
 
+	"github.com/aws/aws-cdk-go/awscdk/v2/awsiam"
 	"github.com/aws/constructs-go/constructs/v10"
 )
+
+func (u *jsiiProxy_UrlShortener) validateGrantInvokeParameters(grantee awsiam.IGrantable) error {
+	if grantee == nil {
+		return fmt.Errorf("parameter grantee is required, but nil was provided")
+	}
+
+	return nil
+}
 
 func validateUrlShortener_IsConstructParameters(x interface{}) error {
 	if x == nil {

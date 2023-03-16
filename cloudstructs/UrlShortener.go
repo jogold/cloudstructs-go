@@ -6,6 +6,7 @@ import (
 	_init_ "github.com/jogold/cloudstructs-go/cloudstructs/jsii"
 
 	"github.com/aws/aws-cdk-go/awscdk/v2/awsapigateway"
+	"github.com/aws/aws-cdk-go/awscdk/v2/awsiam"
 	"github.com/aws/constructs-go/constructs/v10"
 	"github.com/jogold/cloudstructs-go/cloudstructs/internal"
 )
@@ -14,11 +15,13 @@ import (
 type UrlShortener interface {
 	constructs.Construct
 	// The underlying API Gateway REST API.
-	Api() awsapigateway.LambdaRestApi
+	Api() awsapigateway.RestApi
 	// The endpoint of the URL shortener API.
 	ApiEndpoint() *string
 	// The tree node.
 	Node() constructs.Node
+	// Grant access to invoke the URL shortener if protected by IAM authorization.
+	GrantInvoke(grantee awsiam.IGrantable) awsiam.Grant
 	// Returns a string representation of this construct.
 	ToString() *string
 }
@@ -28,8 +31,8 @@ type jsiiProxy_UrlShortener struct {
 	internal.Type__constructsConstruct
 }
 
-func (j *jsiiProxy_UrlShortener) Api() awsapigateway.LambdaRestApi {
-	var returns awsapigateway.LambdaRestApi
+func (j *jsiiProxy_UrlShortener) Api() awsapigateway.RestApi {
+	var returns awsapigateway.RestApi
 	_jsii_.Get(
 		j,
 		"api",
@@ -102,6 +105,22 @@ func UrlShortener_IsConstruct(x interface{}) *bool {
 		"cloudstructs.UrlShortener",
 		"isConstruct",
 		[]interface{}{x},
+		&returns,
+	)
+
+	return returns
+}
+
+func (u *jsiiProxy_UrlShortener) GrantInvoke(grantee awsiam.IGrantable) awsiam.Grant {
+	if err := u.validateGrantInvokeParameters(grantee); err != nil {
+		panic(err)
+	}
+	var returns awsiam.Grant
+
+	_jsii_.Invoke(
+		u,
+		"grantInvoke",
+		[]interface{}{grantee},
 		&returns,
 	)
 
