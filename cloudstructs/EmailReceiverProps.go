@@ -19,6 +19,8 @@ type EmailReceiverProps struct {
 	Recipients *[]*string `field:"required" json:"recipients" yaml:"recipients"`
 	// An existing rule after which the new rule will be placed in the rule set.
 	AfterRule awsses.IReceiptRule `field:"optional" json:"afterRule" yaml:"afterRule"`
+	// Whether the receiver is active.
+	Enabled *bool `field:"optional" json:"enabled" yaml:"enabled"`
 	// A regular expression to whitelist source email addresses.
 	SourceWhitelist *string `field:"optional" json:"sourceWhitelist" yaml:"sourceWhitelist"`
 }
