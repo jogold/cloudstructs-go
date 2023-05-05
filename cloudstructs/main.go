@@ -36,6 +36,40 @@ func init() {
 			return &jsiiProxy_CodeCommitMirrorSourceRepository{}
 		},
 	)
+	_jsii_.RegisterEnum(
+		"cloudstructs.DmarcAlignment",
+		reflect.TypeOf((*DmarcAlignment)(nil)).Elem(),
+		map[string]interface{}{
+			"RELAXED": DmarcAlignment_RELAXED,
+			"STRICT": DmarcAlignment_STRICT,
+		},
+	)
+	_jsii_.RegisterEnum(
+		"cloudstructs.DmarcPolicy",
+		reflect.TypeOf((*DmarcPolicy)(nil)).Elem(),
+		map[string]interface{}{
+			"NONE": DmarcPolicy_NONE,
+			"QUARANTINE": DmarcPolicy_QUARANTINE,
+			"REJECT": DmarcPolicy_REJECT,
+		},
+	)
+	_jsii_.RegisterClass(
+		"cloudstructs.DmarcReporter",
+		reflect.TypeOf((*DmarcReporter)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+		},
+		func() interface{} {
+			j := jsiiProxy_DmarcReporter{}
+			_jsii_.InitJsiiProxy(&j.Type__constructsConstruct)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"cloudstructs.DmarcReporterProps",
+		reflect.TypeOf((*DmarcReporterProps)(nil)).Elem(),
+	)
 	_jsii_.RegisterClass(
 		"cloudstructs.EcsServiceRoller",
 		reflect.TypeOf((*EcsServiceRoller)(nil)).Elem(),
