@@ -1,6 +1,5 @@
 //go:build !no_runtime_type_checking
 
-// High-level constructs for AWS CDK
 package cloudstructs
 
 import (

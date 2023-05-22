@@ -1,3 +1,4 @@
+// High-level constructs for AWS CDK
 package cloudstructs
 
 import (
