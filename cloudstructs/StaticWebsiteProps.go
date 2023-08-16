@@ -24,8 +24,12 @@ type StaticWebsiteProps struct {
 	//
 	BackendConfiguration interface{} `field:"optional" json:"backendConfiguration" yaml:"backendConfiguration"`
 	// A list of domain names that should redirect to `domainName`.
+	// Default: - the domain name of the hosted zone.
+	//
 	Redirects *[]*string `field:"optional" json:"redirects" yaml:"redirects"`
 	// Response headers policy for the default behavior.
+	// Default: - a new policy is created with best practice security headers.
+	//
 	ResponseHeadersPolicy awscloudfront.ResponseHeadersPolicy `field:"optional" json:"responseHeadersPolicy" yaml:"responseHeadersPolicy"`
 }
 

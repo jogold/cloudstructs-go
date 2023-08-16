@@ -16,9 +16,13 @@ type SlackAppManifestSettings struct {
 	// Whether org-wide deploy is enabled.
 	// See: https://api.slack.com/enterprise/apps
 	//
+	// Default: false.
+	//
 	OrgDeploy *bool `field:"optional" json:"orgDeploy" yaml:"orgDeploy"`
 	// Whether Socket Mode is enabled.
 	// See: https://api.slack.com/apis/connections/socket
+	//
+	// Default: false.
 	//
 	SocketMode *bool `field:"optional" json:"socketMode" yaml:"socketMode"`
 }

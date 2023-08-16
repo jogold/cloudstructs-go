@@ -17,10 +17,16 @@ type EmailReceiverProps struct {
 	// The recipients for which emails should be received.
 	Recipients *[]*string `field:"required" json:"recipients" yaml:"recipients"`
 	// An existing rule after which the new rule will be placed in the rule set.
+	// Default: - The new rule is inserted at the beginning of the rule list.
+	//
 	AfterRule awsses.IReceiptRule `field:"optional" json:"afterRule" yaml:"afterRule"`
 	// Whether the receiver is active.
+	// Default: true.
+	//
 	Enabled *bool `field:"optional" json:"enabled" yaml:"enabled"`
 	// A regular expression to whitelist source email addresses.
+	// Default: - no whitelisting of source email addresses.
+	//
 	SourceWhitelist *string `field:"optional" json:"sourceWhitelist" yaml:"sourceWhitelist"`
 }
 

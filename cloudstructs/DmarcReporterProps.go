@@ -27,22 +27,30 @@ type DmarcReporterProps struct {
 	// Additional email addresses to send DMARC reports to.
 	AdditionalEmailAddresses *[]*string `field:"optional" json:"additionalEmailAddresses" yaml:"additionalEmailAddresses"`
 	// An existing rule after which the new rule will be placed in the rule set.
+	// Default: - The new rule is inserted at the beginning of the rule list.
+	//
 	AfterRule awsses.IReceiptRule `field:"optional" json:"afterRule" yaml:"afterRule"`
 	// The alignment mode to use for DKIM signatures.
 	//
 	// This can be one of the following values:
 	// - relaxed: Use relaxed alignment mode.
 	// - strict: Use strict alignment mode.
+	// Default: relaxed.
+	//
 	DmarcDkimAlignment DmarcAlignment `field:"optional" json:"dmarcDkimAlignment" yaml:"dmarcDkimAlignment"`
 	// The percentage of messages that should be checked for DMARC compliance.
 	//
 	// This is a value between 0 and 100.
+	// Default: 100.
+	//
 	DmarcPercentage *float64 `field:"optional" json:"dmarcPercentage" yaml:"dmarcPercentage"`
 	// The alignment mode to use for SPF signatures.
 	//
 	// This can be one of the following values:
 	// - relaxed: Use relaxed alignment mode.
 	// - strict: Use strict alignment mode.
+	// Default: relaxed.
+	//
 	DmarcSpfAlignment DmarcAlignment `field:"optional" json:"dmarcSpfAlignment" yaml:"dmarcSpfAlignment"`
 	// The DMARC policy to apply to messages that fail DMARC compliance for subdomains.
 	//
@@ -50,10 +58,14 @@ type DmarcReporterProps struct {
 	// - none: Do not apply any special handling to messages that fail DMARC compliance.
 	// - quarantine: Quarantine messages that fail DMARC compliance.
 	// - reject: Reject messages that fail DMARC compliance.
+	// Default: inherited from dmarcPolicy.
+	//
 	DmarcSubdomainPolicy DmarcPolicy `field:"optional" json:"dmarcSubdomainPolicy" yaml:"dmarcSubdomainPolicy"`
 	// The email address to send DMARC reports to.
 	//
 	// This email address must be verified in SES.
+	// Default: dmarc-reports.
+	//
 	EmailAddress *string `field:"optional" json:"emailAddress" yaml:"emailAddress"`
 }
 

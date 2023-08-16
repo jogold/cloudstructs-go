@@ -10,6 +10,8 @@ type SlackkAppManifestBotUser struct {
 	// Maximum length is 80 characters.
 	DisplayName *string `field:"required" json:"displayName" yaml:"displayName"`
 	// Whether the bot user will always appear to be online.
+	// Default: false.
+	//
 	AlwaysOnline *bool `field:"optional" json:"alwaysOnline" yaml:"alwaysOnline"`
 }
 

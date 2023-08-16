@@ -6,6 +6,8 @@ package cloudstructs
 //
 type SlackAppManifestInteractivity struct {
 	// Whether or not interactivity features are enabled.
+	// Default: true.
+	//
 	Enabled *bool `field:"optional" json:"enabled" yaml:"enabled"`
 	// The full https URL that acts as th interactive Options Load URL.
 	MessageMenuOptionsUrl *string `field:"optional" json:"messageMenuOptionsUrl" yaml:"messageMenuOptionsUrl"`

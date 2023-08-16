@@ -10,8 +10,12 @@ import (
 // The rule or schedule that should trigger a roll.
 type RollTrigger interface {
 	// Roll rule.
+	// Default: - roll everyday at midnight.
+	//
 	Rule() awsevents.Rule
 	// Roll schedule.
+	// Default: - roll everyday at midnight.
+	//
 	Schedule() awsevents.Schedule
 }
 

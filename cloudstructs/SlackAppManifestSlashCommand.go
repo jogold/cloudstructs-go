@@ -14,6 +14,8 @@ type SlackAppManifestSlashCommand struct {
 	// Maximum length is 2000 characters.
 	Description *string `field:"required" json:"description" yaml:"description"`
 	// Whether channels, users, and links typed with the slash command should be escaped.
+	// Default: false.
+	//
 	ShouldEscape *bool `field:"optional" json:"shouldEscape" yaml:"shouldEscape"`
 	// The full https URL that acts as the slash command's request URL.
 	// See: https://api.slack.com/interactivity/slash-commands#creating_commands

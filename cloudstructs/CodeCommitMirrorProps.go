@@ -13,8 +13,12 @@ type CodeCommitMirrorProps struct {
 	// The source repository.
 	Repository CodeCommitMirrorSourceRepository `field:"required" json:"repository" yaml:"repository"`
 	// The schedule for the mirroring operation.
+	// Default: - everyday at midnight.
+	//
 	Schedule awsevents.Schedule `field:"optional" json:"schedule" yaml:"schedule"`
 	// Where to run the mirroring Fargate tasks.
+	// Default: - public subnets.
+	//
 	SubnetSelection *awsec2.SubnetSelection `field:"optional" json:"subnetSelection" yaml:"subnetSelection"`
 }
 

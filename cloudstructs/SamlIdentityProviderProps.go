@@ -13,6 +13,8 @@ type SamlIdentityProviderProps struct {
 	// Deprecated: use `SamlProviderProps` from `aws-cdk-lib/aws-iam`.
 	MetadataDocument *string `field:"required" json:"metadataDocument" yaml:"metadataDocument"`
 	// A name for the SAML identity provider.
+	// Default: - derived for the node's unique id.
+	//
 	// Deprecated: use `SamlProviderProps` from `aws-cdk-lib/aws-iam`.
 	Name *string `field:"optional" json:"name" yaml:"name"`
 }

@@ -11,6 +11,8 @@ type EcsServiceRollerProps struct {
 	// The ECS service for which tasks should be rolled.
 	Service awsecs.IService `field:"required" json:"service" yaml:"service"`
 	// The rule or schedule that should trigger a roll.
+	// Default: - roll everyday at midnight.
+	//
 	Trigger RollTrigger `field:"optional" json:"trigger" yaml:"trigger"`
 }
 

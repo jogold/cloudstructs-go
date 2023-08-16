@@ -21,6 +21,8 @@ type SlackAppProps struct {
 	//
 	Manifest SlackAppManifestDefinition `field:"required" json:"manifest" yaml:"manifest"`
 	// The AWS Secrets Manager secret where to store the app credentials.
+	// Default: - a new secret is created.
+	//
 	CredentialsSecret awssecretsmanager.ISecret `field:"optional" json:"credentialsSecret" yaml:"credentialsSecret"`
 }
 
