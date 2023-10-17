@@ -64,7 +64,7 @@ type DmarcReporterProps struct {
 	// The email address to send DMARC reports to.
 	//
 	// This email address must be verified in SES.
-	// Default: dmarc-reports.
+	// Default: dmarc-reports@${hostedZone.zoneName}
 	//
 	EmailAddress *string `field:"optional" json:"emailAddress" yaml:"emailAddress"`
 }

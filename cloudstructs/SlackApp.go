@@ -24,11 +24,11 @@ type SlackApp interface {
 	//
 	// ```
 	// {
-	//    "appId": "...",
-	//    "clientId": "...",
-	//    "clientSecret": "...",
-	//    "verificationToken": "...",
-	//    "signingSecret": "..."
+	//   "appId": "...",
+	//   "clientId": "...",
+	//   "clientSecret": "...",
+	//   "verificationToken": "...",
+	//   "signingSecret": "..."
 	// }
 	// ```.
 	Credentials() awssecretsmanager.ISecret

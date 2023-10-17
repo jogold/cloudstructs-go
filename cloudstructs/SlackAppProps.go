@@ -12,7 +12,7 @@ type SlackAppProps struct {
 	//
 	// ```
 	// {
-	//    "refreshToken": "<token>"
+	//   "refreshToken": "<token>"
 	// }
 	// ```.
 	ConfigurationTokenSecret awssecretsmanager.ISecret `field:"required" json:"configurationTokenSecret" yaml:"configurationTokenSecret"`
