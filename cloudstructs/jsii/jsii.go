@@ -15,7 +15,7 @@ import (
 	constructs                          "github.com/aws/constructs-go/constructs/v10/jsii"
 )
 
-//go:embed cloudstructs-0.6.43.tgz
+//go:embed cloudstructs-0.6.44.tgz
 var tarball []byte
 
 // Initialize loads the necessary packages in the @jsii/kernel to support the enclosing module.
@@ -28,5 +28,5 @@ func Initialize() {
 	constructs.Initialize()
 
 	// Load this library into the kernel
-	_jsii_.Load("cloudstructs", "0.6.43", tarball)
+	_jsii_.Load("cloudstructs", "0.6.44", tarball)
 }
