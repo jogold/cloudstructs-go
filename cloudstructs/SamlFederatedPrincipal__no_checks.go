@@ -4,6 +4,10 @@ package cloudstructs
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (s *jsiiProxy_SamlFederatedPrincipal) validateAddToAssumeRolePolicyParameters(document awsiam.PolicyDocument) error {
+	return nil
+}
+
 func (s *jsiiProxy_SamlFederatedPrincipal) validateAddToPolicyParameters(statement awsiam.PolicyStatement) error {
 	return nil
 }

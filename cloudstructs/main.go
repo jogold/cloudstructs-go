@@ -130,10 +130,12 @@ func init() {
 		"cloudstructs.SamlFederatedPrincipal",
 		reflect.TypeOf((*SamlFederatedPrincipal)(nil)).Elem(),
 		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "addToAssumeRolePolicy", GoMethod: "AddToAssumeRolePolicy"},
 			_jsii_.MemberMethod{JsiiMethod: "addToPolicy", GoMethod: "AddToPolicy"},
 			_jsii_.MemberMethod{JsiiMethod: "addToPrincipalPolicy", GoMethod: "AddToPrincipalPolicy"},
 			_jsii_.MemberProperty{JsiiProperty: "assumeRoleAction", GoGetter: "AssumeRoleAction"},
 			_jsii_.MemberProperty{JsiiProperty: "conditions", GoGetter: "Conditions"},
+			_jsii_.MemberMethod{JsiiMethod: "dedupeString", GoMethod: "DedupeString"},
 			_jsii_.MemberProperty{JsiiProperty: "federated", GoGetter: "Federated"},
 			_jsii_.MemberProperty{JsiiProperty: "grantPrincipal", GoGetter: "GrantPrincipal"},
 			_jsii_.MemberProperty{JsiiProperty: "policyFragment", GoGetter: "PolicyFragment"},
@@ -141,6 +143,7 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "toJSON", GoMethod: "ToJSON"},
 			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
 			_jsii_.MemberMethod{JsiiMethod: "withConditions", GoMethod: "WithConditions"},
+			_jsii_.MemberMethod{JsiiMethod: "withSessionTags", GoMethod: "WithSessionTags"},
 		},
 		func() interface{} {
 			j := jsiiProxy_SamlFederatedPrincipal{}

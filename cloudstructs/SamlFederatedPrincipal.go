@@ -16,8 +16,8 @@ type SamlFederatedPrincipal interface {
 	// Deprecated: use `SamlPrincipal` from `aws-cdk-lib/aws-iam`.
 	AssumeRoleAction() *string
 	// The conditions under which the policy is in effect.
+	// See: https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_condition.html
 	//
-	// See [the IAM documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_condition.html).
 	// Deprecated: use `SamlPrincipal` from `aws-cdk-lib/aws-iam`.
 	Conditions() *map[string]interface{}
 	// federated identity provider (i.e. 'cognito-identity.amazonaws.com' for users authenticated through Cognito).
@@ -37,12 +37,21 @@ type SamlFederatedPrincipal interface {
 	// it's assumed to be AWS::AccountId.
 	// Deprecated: use `SamlPrincipal` from `aws-cdk-lib/aws-iam`.
 	PrincipalAccount() *string
+	// Add the principal to the AssumeRolePolicyDocument.
+	//
+	// Add the statements to the AssumeRolePolicyDocument necessary to give this principal
+	// permissions to assume the given role.
+	// Deprecated: use `SamlPrincipal` from `aws-cdk-lib/aws-iam`.
+	AddToAssumeRolePolicy(document awsiam.PolicyDocument)
 	// Add to the policy of this principal.
 	// Deprecated: use `SamlPrincipal` from `aws-cdk-lib/aws-iam`.
 	AddToPolicy(statement awsiam.PolicyStatement) *bool
 	// Add to the policy of this principal.
 	// Deprecated: use `SamlPrincipal` from `aws-cdk-lib/aws-iam`.
 	AddToPrincipalPolicy(_statement awsiam.PolicyStatement) *awsiam.AddToPrincipalPolicyResult
+	// Return whether or not this principal is equal to the given principal.
+	// Deprecated: use `SamlPrincipal` from `aws-cdk-lib/aws-iam`.
+	DedupeString() *string
 	// JSON-ify the principal.
 	//
 	// Used when JSON.stringify() is called
@@ -58,7 +67,12 @@ type SamlFederatedPrincipal interface {
 	//
 	// Returns: a new PrincipalWithConditions object.
 	// Deprecated: use `SamlPrincipal` from `aws-cdk-lib/aws-iam`.
-	WithConditions(conditions *map[string]interface{}) awsiam.IPrincipal
+	WithConditions(conditions *map[string]interface{}) awsiam.PrincipalBase
+	// Returns a new principal using this principal as the base, with session tags enabled.
+	//
+	// Returns: a new SessionTagsPrincipal object.
+	// Deprecated: use `SamlPrincipal` from `aws-cdk-lib/aws-iam`.
+	WithSessionTags() awsiam.PrincipalBase
 }
 
 // The jsii proxy struct for SamlFederatedPrincipal
@@ -156,6 +170,17 @@ func NewSamlFederatedPrincipal_Override(s SamlFederatedPrincipal, identityProvid
 	)
 }
 
+func (s *jsiiProxy_SamlFederatedPrincipal) AddToAssumeRolePolicy(document awsiam.PolicyDocument) {
+	if err := s.validateAddToAssumeRolePolicyParameters(document); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		s,
+		"addToAssumeRolePolicy",
+		[]interface{}{document},
+	)
+}
+
 func (s *jsiiProxy_SamlFederatedPrincipal) AddToPolicy(statement awsiam.PolicyStatement) *bool {
 	if err := s.validateAddToPolicyParameters(statement); err != nil {
 		panic(err)
@@ -188,6 +213,19 @@ func (s *jsiiProxy_SamlFederatedPrincipal) AddToPrincipalPolicy(_statement awsia
 	return returns
 }
 
+func (s *jsiiProxy_SamlFederatedPrincipal) DedupeString() *string {
+	var returns *string
+
+	_jsii_.Invoke(
+		s,
+		"dedupeString",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (s *jsiiProxy_SamlFederatedPrincipal) ToJSON() *map[string]*[]*string {
 	var returns *map[string]*[]*string
 
@@ -214,16 +252,29 @@ func (s *jsiiProxy_SamlFederatedPrincipal) ToString() *string {
 	return returns
 }
 
-func (s *jsiiProxy_SamlFederatedPrincipal) WithConditions(conditions *map[string]interface{}) awsiam.IPrincipal {
+func (s *jsiiProxy_SamlFederatedPrincipal) WithConditions(conditions *map[string]interface{}) awsiam.PrincipalBase {
 	if err := s.validateWithConditionsParameters(conditions); err != nil {
 		panic(err)
 	}
-	var returns awsiam.IPrincipal
+	var returns awsiam.PrincipalBase
 
 	_jsii_.Invoke(
 		s,
 		"withConditions",
 		[]interface{}{conditions},
+		&returns,
+	)
+
+	return returns
+}
+
+func (s *jsiiProxy_SamlFederatedPrincipal) WithSessionTags() awsiam.PrincipalBase {
+	var returns awsiam.PrincipalBase
+
+	_jsii_.Invoke(
+		s,
+		"withSessionTags",
+		nil, // no parameters
 		&returns,
 	)
 
