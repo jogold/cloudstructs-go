@@ -23,6 +23,10 @@ type StaticWebsiteProps struct {
 	//   { userPoolId: '1234', apiEndoint: 'https://www.my-api.com/api' }
 	//
 	BackendConfiguration interface{} `field:"optional" json:"backendConfiguration" yaml:"backendConfiguration"`
+	// The Lambda@Edge functions to invoke before serving the contents.
+	// Default: - an origin request function that redirects all requests for a path to /index.html
+	//
+	EdgeLambdas *[]*awscloudfront.EdgeLambda `field:"optional" json:"edgeLambdas" yaml:"edgeLambdas"`
 	// A list of domain names that should redirect to `domainName`.
 	// Default: - the domain name of the hosted zone.
 	//
