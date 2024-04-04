@@ -23,6 +23,10 @@ type StaticWebsiteProps struct {
 	//   { userPoolId: '1234', apiEndoint: 'https://www.my-api.com/api' }
 	//
 	BackendConfiguration interface{} `field:"optional" json:"backendConfiguration" yaml:"backendConfiguration"`
+	// Cache policy for the default behavior.
+	// Default: CachePolicy.CACHING_OPTIMIZED
+	//
+	CachePolicy awscloudfront.ICachePolicy `field:"optional" json:"cachePolicy" yaml:"cachePolicy"`
 	// The Lambda@Edge functions to invoke before serving the contents.
 	// Default: - an origin request function that redirects all requests for a path to /index.html
 	//
