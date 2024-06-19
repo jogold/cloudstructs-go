@@ -116,6 +116,24 @@ func init() {
 		},
 	)
 	_jsii_.RegisterClass(
+		"cloudstructs.MjmlTemplate",
+		reflect.TypeOf((*MjmlTemplate)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberProperty{JsiiProperty: "templateName", GoGetter: "TemplateName"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+		},
+		func() interface{} {
+			j := jsiiProxy_MjmlTemplate{}
+			_jsii_.InitJsiiProxy(&j.Type__constructsConstruct)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"cloudstructs.MjmlTemplateProps",
+		reflect.TypeOf((*MjmlTemplateProps)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
 		"cloudstructs.RollTrigger",
 		reflect.TypeOf((*RollTrigger)(nil)).Elem(),
 		[]_jsii_.Member{
