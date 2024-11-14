@@ -7,6 +7,10 @@ import (
 
 // Properties for a ToolkitCleaner.
 type ToolkitCleanerProps struct {
+	// The timeout for the Lambda functions that clean assets.
+	// Default: Duration.minutes(5)
+	//
+	CleanAssetsTimeout awscdk.Duration `field:"optional" json:"cleanAssetsTimeout" yaml:"cleanAssetsTimeout"`
 	// Only output number of assets and total size that would be deleted but without actually deleting assets.
 	DryRun *bool `field:"optional" json:"dryRun" yaml:"dryRun"`
 	// Retain unused assets that were created recently.
