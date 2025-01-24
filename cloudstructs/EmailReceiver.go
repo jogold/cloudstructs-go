@@ -4,6 +4,8 @@ import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
 	_init_ "github.com/jogold/cloudstructs-go/cloudstructs/jsii"
 
+	"github.com/aws/aws-cdk-go/awscdk/v2/awss3"
+	"github.com/aws/aws-cdk-go/awscdk/v2/awssns"
 	"github.com/aws/constructs-go/constructs/v10"
 	"github.com/jogold/cloudstructs-go/cloudstructs/internal"
 )
@@ -11,8 +13,12 @@ import (
 // Receive emails through SES, save them to S3 and invokes a Lambda function.
 type EmailReceiver interface {
 	constructs.Construct
+	// The S3 bucket where emails are delivered.
+	Bucket() awss3.Bucket
 	// The tree node.
 	Node() constructs.Node
+	// The SNS topic that is notified when emails are delivered to S3.
+	Topic() awssns.ITopic
 	// Returns a string representation of this construct.
 	ToString() *string
 }
@@ -22,11 +28,31 @@ type jsiiProxy_EmailReceiver struct {
 	internal.Type__constructsConstruct
 }
 
+func (j *jsiiProxy_EmailReceiver) Bucket() awss3.Bucket {
+	var returns awss3.Bucket
+	_jsii_.Get(
+		j,
+		"bucket",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_EmailReceiver) Node() constructs.Node {
 	var returns constructs.Node
 	_jsii_.Get(
 		j,
 		"node",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_EmailReceiver) Topic() awssns.ITopic {
+	var returns awssns.ITopic
+	_jsii_.Get(
+		j,
+		"topic",
 		&returns,
 	)
 	return returns

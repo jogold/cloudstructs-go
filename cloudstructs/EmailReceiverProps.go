@@ -7,11 +7,6 @@ import (
 
 // Properties for an EmailReceiver.
 type EmailReceiverProps struct {
-	// A Lambda function to invoke after the message is saved to S3.
-	//
-	// The Lambda
-	// function will be invoked with a SESMessage as event.
-	Function awslambda.IFunction `field:"required" json:"function" yaml:"function"`
 	// The SES receipt rule set where a receipt rule will be added.
 	ReceiptRuleSet awsses.IReceiptRuleSet `field:"required" json:"receiptRuleSet" yaml:"receiptRuleSet"`
 	// The recipients for which emails should be received.
@@ -24,6 +19,11 @@ type EmailReceiverProps struct {
 	// Default: true.
 	//
 	Enabled *bool `field:"optional" json:"enabled" yaml:"enabled"`
+	// A Lambda function to invoke after the message is saved to S3.
+	//
+	// The Lambda
+	// function will be invoked with a SESMessage as event.
+	Function awslambda.IFunction `field:"optional" json:"function" yaml:"function"`
 	// A regular expression to whitelist source email addresses.
 	// Default: - no whitelisting of source email addresses.
 	//
