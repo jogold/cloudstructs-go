@@ -48,7 +48,7 @@ type SamlFederatedPrincipal interface {
 	AddToPolicy(statement awsiam.PolicyStatement) *bool
 	// Add to the policy of this principal.
 	// Deprecated: use `SamlPrincipal` from `aws-cdk-lib/aws-iam`.
-	AddToPrincipalPolicy(_statement awsiam.PolicyStatement) *awsiam.AddToPrincipalPolicyResult
+	AddToPrincipalPolicy(statement awsiam.PolicyStatement) *awsiam.AddToPrincipalPolicyResult
 	// Return whether or not this principal is equal to the given principal.
 	// Deprecated: use `SamlPrincipal` from `aws-cdk-lib/aws-iam`.
 	DedupeString() *string
@@ -197,8 +197,8 @@ func (s *jsiiProxy_SamlFederatedPrincipal) AddToPolicy(statement awsiam.PolicySt
 	return returns
 }
 
-func (s *jsiiProxy_SamlFederatedPrincipal) AddToPrincipalPolicy(_statement awsiam.PolicyStatement) *awsiam.AddToPrincipalPolicyResult {
-	if err := s.validateAddToPrincipalPolicyParameters(_statement); err != nil {
+func (s *jsiiProxy_SamlFederatedPrincipal) AddToPrincipalPolicy(statement awsiam.PolicyStatement) *awsiam.AddToPrincipalPolicyResult {
+	if err := s.validateAddToPrincipalPolicyParameters(statement); err != nil {
 		panic(err)
 	}
 	var returns *awsiam.AddToPrincipalPolicyResult
@@ -206,7 +206,7 @@ func (s *jsiiProxy_SamlFederatedPrincipal) AddToPrincipalPolicy(_statement awsia
 	_jsii_.Invoke(
 		s,
 		"addToPrincipalPolicy",
-		[]interface{}{_statement},
+		[]interface{}{statement},
 		&returns,
 	)
 

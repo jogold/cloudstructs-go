@@ -12,7 +12,7 @@ func (s *jsiiProxy_SamlFederatedPrincipal) validateAddToPolicyParameters(stateme
 	return nil
 }
 
-func (s *jsiiProxy_SamlFederatedPrincipal) validateAddToPrincipalPolicyParameters(_statement awsiam.PolicyStatement) error {
+func (s *jsiiProxy_SamlFederatedPrincipal) validateAddToPrincipalPolicyParameters(statement awsiam.PolicyStatement) error {
 	return nil
 }
 
