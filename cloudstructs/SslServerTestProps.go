@@ -1,7 +1,7 @@
 package cloudstructs
 
 import (
-	"github.com/aws/aws-cdk-go/awscdk/v2/awsevents"
+	"github.com/aws/aws-cdk-go/awscdk/v2/awsscheduler"
 	"github.com/aws/aws-cdk-go/awscdk/v2/awssns"
 )
 
@@ -9,6 +9,10 @@ import (
 type SslServerTestProps struct {
 	// The hostname to test.
 	Host *string `field:"required" json:"host" yaml:"host"`
+	// The email registered with SSL Labs API.
+	// See: https://github.com/ssllabs/ssllabs-scan/blob/master/ssllabs-api-docs-v4.md#register-for-scan-api-initiation-and-result-fetching
+	//
+	RegistrationEmail *string `field:"required" json:"registrationEmail" yaml:"registrationEmail"`
 	// The topic to which the results must be sent when the grade is below the minimum grade.
 	// Default: - a new topic is created.
 	//
@@ -22,6 +26,6 @@ type SslServerTestProps struct {
 	// The schedule for the test.
 	// Default: - every day.
 	//
-	Schedule awsevents.Schedule `field:"optional" json:"schedule" yaml:"schedule"`
+	ScheduleExpression awsscheduler.ScheduleExpression `field:"optional" json:"scheduleExpression" yaml:"scheduleExpression"`
 }
 
