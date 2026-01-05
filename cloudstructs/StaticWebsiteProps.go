@@ -1,12 +1,17 @@
 package cloudstructs
 
 import (
+	"github.com/aws/aws-cdk-go/awscdk/v2/awscertificatemanager"
 	"github.com/aws/aws-cdk-go/awscdk/v2/awscloudfront"
 	"github.com/aws/aws-cdk-go/awscdk/v2/awsroute53"
 )
 
 // Properties for a StaticWebsite.
 type StaticWebsiteProps struct {
+	// The ACM certificate to use for the CloudFront distribution.
+	//
+	// Must be in us-east-1.
+	Certificate awscertificatemanager.ICertificate `field:"required" json:"certificate" yaml:"certificate"`
 	// The domain name for this static website.
 	//
 	// Example:

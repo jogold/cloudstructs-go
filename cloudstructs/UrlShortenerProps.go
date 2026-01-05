@@ -3,12 +3,17 @@ package cloudstructs
 import (
 	"github.com/aws/aws-cdk-go/awscdk/v2"
 	"github.com/aws/aws-cdk-go/awscdk/v2/awsapigateway"
+	"github.com/aws/aws-cdk-go/awscdk/v2/awscertificatemanager"
 	"github.com/aws/aws-cdk-go/awscdk/v2/awsec2"
 	"github.com/aws/aws-cdk-go/awscdk/v2/awsroute53"
 )
 
 // Properties for a UrlShortener.
 type UrlShortenerProps struct {
+	// The ACM certificate to use for the CloudFront distribution.
+	//
+	// Must be in us-east-1.
+	Certificate awscertificatemanager.ICertificate `field:"required" json:"certificate" yaml:"certificate"`
 	// The hosted zone for the short URLs domain.
 	HostedZone awsroute53.IHostedZone `field:"required" json:"hostedZone" yaml:"hostedZone"`
 	// Authorizer for API gateway.
