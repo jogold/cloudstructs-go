@@ -33,7 +33,7 @@ type StaticWebsiteProps struct {
 	//
 	CachePolicy awscloudfront.ICachePolicy `field:"optional" json:"cachePolicy" yaml:"cachePolicy"`
 	// The Lambda@Edge functions to invoke before serving the contents.
-	// Default: - an origin request function that redirects all requests for a path to /index.html
+	// Default: - no edge Lambdas.
 	//
 	EdgeLambdas *[]*awscloudfront.EdgeLambda `field:"optional" json:"edgeLambdas" yaml:"edgeLambdas"`
 	// A list of domain names that should redirect to `domainName`.
