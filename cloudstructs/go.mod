@@ -1,12 +1,12 @@
 module github.com/jogold/cloudstructs-go/cloudstructs
 
-go 1.23
+go 1.25
 
 require (
-	github.com/aws/jsii-runtime-go v1.126.0
-	github.com/aws/aws-cdk-go/awscdk/v2 v2.232.0
-	github.com/aws/constructs-go/constructs/v10 v10.0.5
-	github.com/cdklabs/awscdk-asset-awscli-go/awscliv1/v2 v2.2.242 // indirect
-	github.com/cdklabs/awscdk-asset-node-proxy-agent-go/nodeproxyagentv6/v2 v2.1.0 // indirect
-	github.com/cdklabs/cloud-assembly-schema-go/awscdkcloudassemblyschema/v48 v48.20.0 // indirect
+	github.com/aws/jsii-runtime-go v1.127.0
+	github.com/aws/aws-cdk-go/awscdk/v2 v2.248.0
+	github.com/aws/constructs-go/constructs/v10 v10.5.1
+	github.com/cdklabs/awscdk-asset-awscli-go/awscliv1/v2 v2.2.273 // indirect
+	github.com/cdklabs/awscdk-asset-node-proxy-agent-go/nodeproxyagentv6/v2 v2.1.1 // indirect
+	github.com/cdklabs/cloud-assembly-schema-go/awscdkcloudassemblyschema/v53 v53.13.0 // indirect
 )

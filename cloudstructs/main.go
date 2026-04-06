@@ -14,6 +14,7 @@ func init() {
 		[]_jsii_.Member{
 			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
 			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberMethod{JsiiMethod: "with", GoMethod: "With"},
 		},
 		func() interface{} {
 			j := jsiiProxy_CodeCommitMirror{}
@@ -60,6 +61,7 @@ func init() {
 		[]_jsii_.Member{
 			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
 			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberMethod{JsiiMethod: "with", GoMethod: "With"},
 		},
 		func() interface{} {
 			j := jsiiProxy_DmarcReporter{}
@@ -77,6 +79,7 @@ func init() {
 		[]_jsii_.Member{
 			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
 			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberMethod{JsiiMethod: "with", GoMethod: "With"},
 		},
 		func() interface{} {
 			j := jsiiProxy_EcsServiceRoller{}
@@ -96,6 +99,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
 			_jsii_.MemberProperty{JsiiProperty: "topic", GoGetter: "Topic"},
 			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberMethod{JsiiMethod: "with", GoMethod: "With"},
 		},
 		func() interface{} {
 			j := jsiiProxy_EmailReceiver{}
@@ -124,6 +128,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
 			_jsii_.MemberProperty{JsiiProperty: "templateName", GoGetter: "TemplateName"},
 			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberMethod{JsiiMethod: "with", GoMethod: "With"},
 		},
 		func() interface{} {
 			j := jsiiProxy_MjmlTemplate{}
@@ -178,6 +183,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
 			_jsii_.MemberProperty{JsiiProperty: "samlIdentityProviderArn", GoGetter: "SamlIdentityProviderArn"},
 			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberMethod{JsiiMethod: "with", GoMethod: "With"},
 		},
 		func() interface{} {
 			j := jsiiProxy_SamlIdentityProvider{}
@@ -201,6 +207,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "signingSecret", GoGetter: "SigningSecret"},
 			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
 			_jsii_.MemberProperty{JsiiProperty: "verificationToken", GoGetter: "VerificationToken"},
+			_jsii_.MemberMethod{JsiiMethod: "with", GoMethod: "With"},
 		},
 		func() interface{} {
 			j := jsiiProxy_SlackApp{}
@@ -283,6 +290,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "eventBus", GoGetter: "EventBus"},
 			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
 			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberMethod{JsiiMethod: "with", GoMethod: "With"},
 		},
 		func() interface{} {
 			j := jsiiProxy_SlackEvents{}
@@ -300,6 +308,7 @@ func init() {
 		[]_jsii_.Member{
 			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
 			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberMethod{JsiiMethod: "with", GoMethod: "With"},
 		},
 		func() interface{} {
 			j := jsiiProxy_SlackTextract{}
@@ -322,6 +331,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "alarmTopic", GoGetter: "AlarmTopic"},
 			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
 			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberMethod{JsiiMethod: "with", GoMethod: "With"},
 		},
 		func() interface{} {
 			j := jsiiProxy_SslServerTest{}
@@ -354,6 +364,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
 			_jsii_.MemberProperty{JsiiProperty: "serviceToken", GoGetter: "ServiceToken"},
 			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberMethod{JsiiMethod: "with", GoMethod: "With"},
 		},
 		func() interface{} {
 			j := jsiiProxy_StateMachineCustomResourceProvider{}
@@ -373,6 +384,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "distribution", GoGetter: "Distribution"},
 			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
 			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberMethod{JsiiMethod: "with", GoMethod: "With"},
 		},
 		func() interface{} {
 			j := jsiiProxy_StaticWebsite{}
@@ -390,6 +402,7 @@ func init() {
 		[]_jsii_.Member{
 			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
 			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberMethod{JsiiMethod: "with", GoMethod: "With"},
 		},
 		func() interface{} {
 			j := jsiiProxy_ToolkitCleaner{}
@@ -410,6 +423,7 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "grantInvoke", GoMethod: "GrantInvoke"},
 			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
 			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberMethod{JsiiMethod: "with", GoMethod: "With"},
 		},
 		func() interface{} {
 			j := jsiiProxy_UrlShortener{}
