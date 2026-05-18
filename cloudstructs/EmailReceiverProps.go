@@ -1,6 +1,7 @@
 package cloudstructs
 
 import (
+	"github.com/aws/aws-cdk-go/awscdk/v2"
 	"github.com/aws/aws-cdk-go/awscdk/v2/awslambda"
 	"github.com/aws/aws-cdk-go/awscdk/v2/awsses"
 )
@@ -19,6 +20,10 @@ type EmailReceiverProps struct {
 	// Default: true.
 	//
 	Enabled *bool `field:"optional" json:"enabled" yaml:"enabled"`
+	// The expiration for emails stored in the S3 bucket.
+	// Default: Duration.days(1)
+	//
+	Expiration awscdk.Duration `field:"optional" json:"expiration" yaml:"expiration"`
 	// A Lambda function to invoke after the message is saved to S3.
 	//
 	// The Lambda
