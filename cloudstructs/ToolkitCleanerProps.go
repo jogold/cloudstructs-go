@@ -7,7 +7,7 @@ import (
 
 // Properties for a ToolkitCleaner.
 type ToolkitCleanerProps struct {
-	// The timeout for the clean function.
+	// The timeout for the durable execution of the clean function.
 	// Default: Duration.minutes(30)
 	//
 	CleanAssetsTimeout awscdk.Duration `field:"optional" json:"cleanAssetsTimeout" yaml:"cleanAssetsTimeout"`
