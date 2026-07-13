@@ -3,7 +3,7 @@ module github.com/jogold/cloudstructs-go/cloudstructs
 go 1.25
 
 require (
-	github.com/aws/jsii-runtime-go v1.136.0
+	github.com/aws/jsii-runtime-go v1.138.0
 	github.com/aws/aws-cdk-go/awscdk/v2 v2.257.0
 	github.com/aws/constructs-go/constructs/v10 v10.5.1
 	github.com/cdklabs/awscdk-asset-awscli-go/awscliv1/v2 v2.2.273 // indirect
